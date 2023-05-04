@@ -2,4 +2,6 @@ fn main() {
     println!("Hello, world!");
 }
 
-fn foo() {}
+fn foo( ) {}
+
+fn bar() {}
