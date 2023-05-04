@@ -1,7 +1,15 @@
 on: pull_request
 name: Clippy check
 jobs:
-  clippy:
+  format-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt
+      - run: cargo fmt --check
+  clippy-check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
