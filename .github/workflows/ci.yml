@@ -19,6 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build]
     steps:
+      - run: ls
       - run: cargo fmt --check
   clippy-check:
     runs-on: ubuntu-latest
